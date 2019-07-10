@@ -31,5 +31,6 @@ public class MapperTest {
     public void testCRUD(){
         System.out.println(departmentMapper);
         employeeMapper.insertSelective(new Employee(1, "Jery", "M","Jerry@qq.com", 1));
+        employeeMapper.insertSelective(new Employee(3, "Jerry", "M","Jerry12@qq.com", 1));
     }
 }
