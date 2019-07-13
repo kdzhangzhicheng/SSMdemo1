@@ -43,9 +43,12 @@
         <property name="mapperLocations" value="classpath:manage/mapper/*.xml"></property>
     </bean>
 
+
+
     <!--配置扫描，将mybatis接口的实现加入到ioc容器中-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="manage.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
         <!-- 具体dao层包的位置在哪，视新建的dao层java包而定 -->
     </bean>
 </beans>

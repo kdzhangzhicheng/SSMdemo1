@@ -40,6 +40,7 @@
             <tx:method name="get*" propagation="SUPPORTS" read-only="true"/>
         </tx:attributes>
     </tx:advice>
+
     <!-- 切面 -->
     <aop:config>
         <!--(* manage.service.*.*(..)) 返回值 service下的所有类，所有方法，所有参数-->

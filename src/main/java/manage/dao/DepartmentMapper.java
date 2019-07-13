@@ -6,7 +6,7 @@ import manage.bean.DepartmentExample;
 import org.apache.ibatis.annotations.Param;
 
 public interface DepartmentMapper {
-    int countByExample(DepartmentExample example);
+    long countByExample(DepartmentExample example);
 
     int deleteByExample(DepartmentExample example);
 

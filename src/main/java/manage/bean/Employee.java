@@ -3,17 +3,6 @@ package manage.bean;
 import java.io.Serializable;
 
 public class Employee implements Serializable {
-    public Employee() {
-    }
-
-    public Employee(Integer emp_id, String emp_name, String gender, String email, Integer d_id) {
-        this.emp_id = emp_id;
-        this.emp_name = emp_name;
-        this.gender = gender;
-        this.email = email;
-        this.d_id = d_id;
-    }
-
     private Integer emp_id;
 
     private String emp_name;
@@ -23,6 +12,20 @@ public class Employee implements Serializable {
     private String email;
 
     private Integer d_id;
+
+    /*
+        查询员工的时候把部门查出来
+    */
+
+    private Department department;
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
 
     private static final long serialVersionUID = 1L;
 

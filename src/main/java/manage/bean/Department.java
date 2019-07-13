@@ -3,14 +3,6 @@ package manage.bean;
 import java.io.Serializable;
 
 public class Department implements Serializable {
-    public Department() {
-    }
-
-    public Department(Integer dept_id, String dept_name) {
-        this.dept_id = dept_id;
-        this.dept_name = dept_name;
-    }
-
     private Integer dept_id;
 
     private String dept_name;
