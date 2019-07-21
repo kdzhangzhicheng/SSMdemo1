@@ -53,6 +53,9 @@
       </foreach>
     </where>
   </sql>
+
+
+
   <sql id="Update_By_Example_Where_Clause">
     <where>
       <foreach collection="example.oredCriteria" item="criteria" separator="or">

@@ -13,9 +13,6 @@
     <mvc:annotation-driven/>
 
 
-
-
-
     <!-- 配置包扫描器 -->
     <!-- 使用注解开发，不用配置controller，需要配置一个组件扫描器 -->
     <!--只扫描Controller包-->
@@ -25,12 +22,8 @@
        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:include-filter>
     </context:component-scan>
 
-
-
     <!-- 静态资源默认servlet配置 -->
     <!--视图解析器-->
-
-
 
     <bean class ="org.springframework.web.servlet.view.InternalResourceViewResolver">
 
@@ -47,9 +40,6 @@
             <bean class="manage.base.interceptor.PermissionInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>-->
-
-
-
 
     <mvc:default-servlet-handler/>
 

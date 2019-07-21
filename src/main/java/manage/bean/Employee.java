@@ -1,14 +1,19 @@
 package manage.bean;
 
+import org.hibernate.validator.constraints.Email;
+
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 
 public class Employee implements Serializable {
     private Integer emp_id;
 
+    @Pattern(regexp = "(^[a-zA-Z0-9_-]{6,16}$)|(^[\\u2E80-\\u9FFF]{2,5})", message = "用户名输入错误，2到5个汉字或者6到16位英文名字")
     private String emp_name;
 
     private String gender;
 
+    @Email
     private String email;
 
     private Integer d_id;
@@ -67,5 +72,17 @@ public class Employee implements Serializable {
 
     public void setD_id(Integer d_id) {
         this.d_id = d_id;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "emp_id=" + emp_id +
+                ", emp_name='" + emp_name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", email='" + email + '\'' +
+                ", d_id=" + d_id +
+                ", department=" + department +
+                '}';
     }
 }
